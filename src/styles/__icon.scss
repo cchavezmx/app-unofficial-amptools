@@ -1,0 +1,73 @@
+.hamburger__button{
+  visibility: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  width: 2rem;
+  height: 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+
+  span{
+    width: 1.5rem;
+    height: 0.25rem;
+    background: #bdc3c7;
+    border-radius: 10px;
+    transition: all 0.3s ease-in;
+    position: relative;
+    transform-origin: 1px;
+  }
+
+}
+
+.await__logo{
+  background-image: url("../assets/logo/logoawait.png");
+  background-repeat: no-repeat;
+  background-size: 200px;
+  filter: drop-shadow(0px 0px 3px rgb(255, 255, 255));
+  background-position: center;
+  border-radius: 100%;
+  min-width: 200px;
+  min-height: 200px;
+  animation: opacity 4s infinite ease-in-out;
+}
+
+@keyframes opacity {
+  0% { opacity: 0.25; }
+  25% { opacity: 0.75; }
+  50% { opacity: 1; }
+  100% { opacity: 0.25;}
+}
+
+
+.hamburger__button__open{
+  position: relative;
+
+  span{
+    width: 1.5rem;
+    height: 0.25rem;
+    background: #bdc3c7;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+
+      &:first-child{
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(2){
+        opacity: 0;
+        transform: translate(20px);
+
+      }
+
+      &:nth-child(3){
+        transform: rotate(-45deg);
+      }
+  }
+}

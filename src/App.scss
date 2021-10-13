@@ -1,0 +1,12 @@
+@import '/src/styles/index.scss';
+
+@font-face {
+  font-family: Poppins;
+  src: url('assets/fonts/Poppins-Regular.ttf');
+}
+
+@import './styles/index.scss';
+@import './styles/_variables';
+@import './styles/_containers';
+@import './styles/_icon';
+@import './styles/access_bo';

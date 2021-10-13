@@ -1,0 +1,114 @@
+#Dashboard{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+
+  h1{
+    margin-bottom: 5rem;
+  }
+} 
+
+.acction__card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 150px;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  font-weight: bold;
+  font-size: large;
+  cursor: pointer;
+
+
+  &:hover{
+    opacity: 0.60;
+  }
+}
+
+.salidas__container__input{
+  display: flex;
+  align-items: center;
+  background-color: #3498db;
+  box-shadow: var(--shadow);
+  border-radius: 18px;
+  width: 500px;
+  min-height: 200px;
+
+  form{
+    margin: 10px;
+    width: 100%;
+    height: fit-content;          
+
+    input{
+      background-color: white;
+      border-radius: 0px;
+      margin-top: 10px;  
+      box-sizing: border-box;
+      width: 100%;
+      height: 60px;
+      padding: 0.65rem;
+      border: 0;
+      font-size: x-large;
+      font-family: Poppins;
+      text-align: center;
+      box-shadow: none;
+    }
+
+    select{
+      margin-top: 10px;  
+      box-sizing: border-box;
+      width: 100%;
+      padding: 0.65rem;
+      border: 0;
+      font-size: large;
+      font-family: Poppins;
+      text-align: center;
+    }
+  }
+
+}
+
+.control__salidas__view{
+  font-family: Poppins;
+  width: 100%;
+  text-align: center;
+
+  section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+
+  button{
+    font-family: Poppins;
+    font-size: large;
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    border-radius: 4px;  
+    color: var(--black);
+    font-weight: bold;
+    width: 200px;
+    height: 60px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    &:hover{
+      opacity: 0.60;
+      margin: 3px transparent;
+    }
+
+    &:active{
+      scale: (0.9);
+    }
+
+    &:disabled{
+      background-color: yellow;
+    }
+  }
+}

@@ -1,0 +1,243 @@
+.access__bo__container{
+  font-family: Poppins;
+  width: fit-content;
+  padding: 1rem;
+  width: 400px;
+  height: 100%;
+  // background-color: var(--panache);
+  background: linear-gradient(180deg, rgba(106,206,48,1) 0%, rgba(133,196,64,1) 100%);
+  border-radius: 8px;
+  color: var(--bunker);
+  font-size: larger;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+  textarea{
+    width: 100%;
+    height: 200px;
+    resize: vertical;
+    overflow-y: auto;
+    border: none;
+  }
+
+  p{
+    text-align: center;
+  }
+
+  ul{
+     list-style: none;
+     width: 100%;
+     height: 30px;
+     margin: 0;
+     padding: 0;
+
+     li{
+       display: flex;
+       align-items: flex-start;
+       height: 100%;
+     }
+
+     li > label{
+       font-size: 14px;
+       font-weight: normal;
+       flex-basis: 90%;
+       height: fit-content;
+       color: var(--black);
+       align-items: flex-start;
+       text-transform: capitalize;
+       margin: 0;
+       padding: 0;
+     }
+
+     li > input[type=checkbox] {
+        height: 1rem;
+     }
+
+     .style_2n{
+       background-color: white;
+       color: var(--black);
+       padding: 3px 10px;
+     }
+
+     .style_1n{
+        background-color: #ecf0f1;
+        color: var(--black);
+        padding: 3px 10px;
+     }
+
+     li > input{
+       flex-basis: 10%;
+
+     }
+  }
+  
+  form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+
+    
+    label{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 1rem;
+      width: 100%;
+      font-weight: bold;
+
+    }
+
+    input{
+      background-color: white;
+      font-family: Poppins;
+      margin: 10px;
+      border-radius: 8px;
+      outline: none;
+      border: 1px solid var(--verde99);
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    select{
+      font-family: Poppins;
+      margin: 10px;
+      border-radius: 8px;
+      outline: none;
+      border: 1px solid var(--verde99);
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    button{
+      
+      font-family: Poppins;
+      background-color: white;
+      color: #34495e;
+      font-weight: bold;
+      border: none;
+      outline: none;
+      padding: 0.5rem;
+      width: 180px;
+      height: 40px;
+      margin: 20px 4px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 2ms ease-in-out;
+
+      &:hover{
+        opacity: 0.60;
+      }
+
+      &:active{
+        transform: scale(0.9);
+        overflow: hidden;
+      }
+
+      textarea{
+        border: none;
+      }
+    }
+  }
+
+}
+
+
+.response__liv__push{
+  position: relative;
+  width: 400px;
+  top: 5%;
+  background-color: white;
+  box-shadow: var(--shadow);
+  font-size: smaller;
+
+  tbody tr {
+    text-align: center;
+  }
+
+  tbody > tr  > td:last-child{
+    width: 100px;
+
+    p{
+      text-align: center;
+      font-size: x-small;
+      overflow:hidden;
+      text-overflow:clip;
+    }        
+  }
+}
+
+.response__liv__push::before{
+  content: url("../assets/icons/times.svg");
+  width: 30px;
+  height: 30px;
+  padding: 3px;
+  background-color: var(--black);
+  border-radius: 1000%;
+  position: absolute;
+  top: -40px;
+  right: -45px;
+  cursor: pointer;
+}
+
+.response__liv__push
+:before
+:active{
+  transform: scale(0.9);
+}
+
+
+.info__error__acceso{
+  padding-top: 1rem;
+  font-size: medium;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+
+  p:first-of-type{
+    font-family: Poppins;
+    color: var(--black);
+  }
+
+  section{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  section div{
+    background-color: var(--pistachio);
+    border-radius: 8px;
+    padding: 0.60rem;
+  }
+
+  section div span{
+    display: flex;
+    margin: 0;
+
+    p{
+      margin: 0;
+    }
+    
+    p:nth-child(1){
+      margin-right: 10px;
+      font-weight: bold;
+    }
+
+    p:nth-child(2){
+      font-size: small;
+    }
+
+  }
+
+}
+
+@media (max-width: 60rem){
+  .access__bo__container{
+    form{
+      width: 100%;
+    }
+  }
+}
