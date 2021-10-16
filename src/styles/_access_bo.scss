@@ -76,6 +76,11 @@
     align-items: center;
     width: 400px;
 
+    input[type=checkbox]{
+      height: 20px;
+      width: 20px;
+    }
+
     
     label{
       display: flex;
@@ -142,7 +147,6 @@
   }
 
 }
-
 
 .response__liv__push{
   position: relative;

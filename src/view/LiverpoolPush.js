@@ -46,6 +46,10 @@ const LiverpoolPush = () => {
         </form>
       )
     }
+    
+    {
+      console.log(response, typeof response)
+    }
 
     {
        loading 
@@ -59,6 +63,7 @@ const LiverpoolPush = () => {
         </thead>
           <tbody>
           {
+            response  !== null ?
             Object.values(response).map(({ res, guia, respuesta }) => {
               return(
               <tr>
@@ -68,6 +73,7 @@ const LiverpoolPush = () => {
               </tr>
               )
             })
+            : <p>La guia no existe</p>
           }
           </tbody>
          </table>
