@@ -3,12 +3,14 @@ import FetchHook from './FetchHook'
 
 const chmod = async (ctx, evt) => {
 
-  await FetchHook({
+  const order = await FetchHook({
     url: '/orders/chmod',
     metohd :'patch',
     data: evt.data
 
   })
+  console.log({ order }, 'midu')
+  return order
 
 }
 
@@ -19,7 +21,13 @@ const StatusMachine = createMachine({
   },
   states: {
     iddle: {},
-    success: {},
+    success: {
+      after: {
+        4000: {
+          target: 'iddle'
+        }
+      }
+    },
     error: {},
     chmodStatus: {
       invoke: {
