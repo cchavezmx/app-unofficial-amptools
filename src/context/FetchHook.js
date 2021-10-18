@@ -34,7 +34,7 @@ const FetchHook = async({ url, data, metohd } = {}) => {
     })
       .then(res => res.json())
       .then(res => res.message)
-      .catch(err => console.log(err))
+      .catch(err => console.log({ err }))
 
     return patch
   }
