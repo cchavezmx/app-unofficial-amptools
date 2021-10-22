@@ -4,6 +4,7 @@ import PermisosBO from 'view/PermisosBO'
 import LiverpoolPush from 'view/LiverpoolPush'
 import InditexBO from 'view/InditexBO'
 import StatusTool from 'view/StatusTool'
+import SearchOrder from 'view/SearchOrder'
 
 const routes =  [
   { path: '/', exact: true, name: 'Home' },
@@ -13,6 +14,7 @@ const routes =  [
   { path: '/liverpoolpush', name: 'Dashboard', componente: LiverpoolPush },
   { path: '/inditex', name: 'Dashboard', componente: InditexBO },
   { path: '/status', name: 'Dashboard', componente: StatusTool },
+  { path: '/searchorder', name: 'Dashboard', componente: SearchOrder },
 ]
 
 export default routes
