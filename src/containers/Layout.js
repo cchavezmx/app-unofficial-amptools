@@ -5,34 +5,25 @@ import { useHistory } from 'react-router-dom'
 const Layout = ({ props }) => {
 
   const history = useHistory()
+  const location = history.location.pathname.split('/')
+    
+  
+  useEffect(() => {
+    const activeButton = document.getElementById(location[1].toString())
+    if (document.querySelector('.is_active')) {
+      document.querySelector('.is_active').classList.remove('is_active')
+    }
+    return activeButton?.classList.add("is_active")
+
+  }, [location])
+
   const [hamburgerOpen, setHamburgerOpen] = useState(false)
   const toogleHAmburger = () => setHamburgerOpen(!hamburgerOpen)
-
-  const handledSelectOption = () => {
-    const buttons = document.querySelectorAll('button')
-
-    buttons.forEach(button => {
-
-      button.addEventListener('click', ({ target }) => {             
-
-          if (document.querySelector('.is_active')) {
-            document.querySelector('.is_active').classList.remove('is_active')
-          }
-
-          return target.classList.add("is_active")
-      })
-    })
-  }
-
-  useEffect(() => {
-    handledSelectOption()
-  }, [])
 
   return (
     <div className="App__container">
         <div className="App__header">
           <nav>
-
             <div>
               <span 
                 onClick={toogleHAmburger}
@@ -59,23 +50,32 @@ const Layout = ({ props }) => {
               <div className="separacion"></div>
               <p>Backoffice</p>
               <button
-                className="is_active"                
+                className="is_active"
+                id="accessbo"                
                 onClick={() => history.push({ pathname: '/accessbo'})}>              
                 Accesos
               </button>
               <button 
+                id="permisosbo"   
                 onClick={() => history.push({ pathname: '/permisosbo'})}>              
                 Permisos 
               </button>
               <div className="separacion"></div>
               <p>Herramientas</p>
               <button 
+                id="liverpoolpush"   
                 onClick={() => history.push({ pathname: '/liverpoolpush'})}>              
                 Notificaciones Liverpool 
               </button>
               <button 
+                id="status"   
                 onClick={() => history.push({ pathname: '/status'})}>              
                 Cambio Masivo (Estatus) 
+              </button>
+              <button 
+                id="searchorder"   
+                onClick={() => history.push({ pathname: '/searchorder'})}>              
+                Buscar Orden
               </button>
             </nav>
           </div>

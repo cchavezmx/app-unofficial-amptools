@@ -26,8 +26,7 @@ const StatusTool = () => {
   }
 
   return(
-    <div className="access__bo__container">
-      { current.value }
+    <div className="access__bo__container">      
       <form onSubmit={handleSubmit(handledSubmit)}>
         <p>Counters</p>
           <textarea
