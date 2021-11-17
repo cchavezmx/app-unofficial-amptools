@@ -7,7 +7,7 @@ import AlertNotify from 'components/AlertNotify'
 const StatusTool = () => {
 
   const [current, send] = useMachine(StatusMachine)
-  const { register, handleSubmit, formState:{ errors }, reset } = useForm({
+  const { register, handleSubmit, reset } = useForm({
     defaultValues: {
       reactivate: true
     }
